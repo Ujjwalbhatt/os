@@ -22,12 +22,12 @@ int main()
     remainingTime[i]=bt[i];
     
     int ct[n],tat[n],wt[n];
-    int nProComp=0;
-    int currentTime=0;
+    int nProComp=0; // number of process completed
+    int currentTime=0; // current time
         while(nProComp!=n){
 
         // finding shortes job among all
-        int shortestJob = -1;
+        int shortestJob = -1; // index of shortest job
         int shortestTime = INT_MAX;
         for (int i = 0; i < n; i++) {
             if (at[i] <= currentTime && remainingTime[i] < shortestTime && remainingTime[i] > 0) {
