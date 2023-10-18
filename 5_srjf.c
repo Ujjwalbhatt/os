@@ -1,4 +1,4 @@
-// sjf preemptive
+// srjf preemptive
 #include <stdio.h>
 #include<math.h>
 #include<limits.h>
@@ -67,3 +67,4 @@ int main()
     printf("\navgTat : %f\n",avgTat);
     printf("avgWt : %f",avgWat);
 }
+
