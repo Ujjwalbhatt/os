@@ -40,7 +40,6 @@ int main()
 						break;
 					}
 				}
-
 				if (flag == 0) {
 					ans[ind++] = i;
 					for (int y = 0; y < m; y++)
@@ -50,7 +49,6 @@ int main()
 			}
 		}
 	}
-
 	int flag = 1;
 	
 	for(int i=0;i<n;i++)
@@ -62,7 +60,6 @@ int main()
 		break;
 	}
 	}
-	
 	if(flag==1)
 	{
 	printf("Following is the SAFE Sequence\n");
@@ -70,9 +67,5 @@ int main()
 		printf(" P%d ->", ans[i]);
 	printf(" P%d", ans[n - 1]);
 	}
-	
-
 	return (0);
-
-	// This code is contributed by Deep Baldha (CandyZack)
 }
