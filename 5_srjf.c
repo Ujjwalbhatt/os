@@ -8,15 +8,13 @@ int main()
     int n;
     scanf("%d",&n);
 
-    int at[n],bt[n],pid[n];
+    int at[n],bt[n],pid[n],rt[n];
     for(int i=0;i<n;i++){
         pid[i]=i+1;
         printf("enter the arrival time and burst time of %d procces:",i+1);
         scanf("%d%d",&at[i],&bt[i]);
+        rt[i]=bt[i];
     }
-    int rt[n];
-    for(int i=0;i<n;i++)
-    rt[i]=bt[i];
     
     int ct[n],tat[n],wt[n];
     int nProComp=0; // number of process completed
@@ -42,12 +40,6 @@ int main()
             ct[shortestJobIndex] = currentTime + 1;
         }
         currentTime++;
-        //Dry run
-        printf("Current Time : %d\n",currentTime);
-        for(int i=0;i<n;i++){
-            printf("%d ",rt[i]);
-        }
-        printf("\n");
     }
     
     float avgTat=0,avgWat=0;
