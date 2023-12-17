@@ -23,11 +23,8 @@ void main()
   y = NOP;
   for (i = 0; i < NOP; i++)
   {
-    printf("\nEnter the Arrival and Burst time of the Process[%d]\n", i + 1);
-    printf("Arrival time is:");
-    scanf("%d", &at[i]);
-    printf("\nBurst time is:");
-    scanf("%d", &bt[i]);
+    printf("\nEnter the Arrival and Burst time of the Process[%d]: ", i + 1);
+    scanf("%d%d", &at[i], &bt[i]);
     temp[i] = bt[i];
   }
   printf("Enter the Time Quantum for the process:");

@@ -40,7 +40,7 @@ void *fun2()
     sem_wait(&s);
     y = shared; // thread2 reads value of shared variable
     printf("Thread2 reads the value as %d\n", y);
-    y--; // thread2 increments its value
+    y--; // thread2 decrements its value
     printf("Local updation by Thread2: %d\n", y);
     sleep(1);   // thread2 is preempted by thread 1
     shared = y; // thread2 updates the value of shared variable
