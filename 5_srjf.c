@@ -16,7 +16,6 @@ int main()
         printf("enter the burst time of %d procces:",i+1);
         scanf("%d",&bt[i]);
     }
-    
     int remainingTime[n];
     for(int i=0;i<n;i++)
     remainingTime[i]=bt[i];
@@ -25,7 +24,6 @@ int main()
     int nProComp=0; // number of process completed
     int currentTime=0; // current time
         while(nProComp!=n){
-
         // finding shortes job among all
         int shortestJob = -1; // index of shortest job
         int shortestTime = INT_MAX;
@@ -47,7 +45,7 @@ int main()
         }
 
         currentTime++;
-
+        
     }
     
     float avgTat=0,avgWat=0;
@@ -67,4 +65,5 @@ int main()
     printf("\navgTat : %f\n",avgTat);
     printf("avgWt : %f",avgWat);
 }
+
 
