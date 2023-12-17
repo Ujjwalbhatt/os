@@ -62,10 +62,12 @@ void main()
   {
       tat=ct[i]-at[i];
       wt=tat-bt[i];
+      avg_tat+=tat;
+      avg_wt+=wt;
       printf("%d\t\t%d\t\t%d\t\t%d\t\t%d\n",at[i],bt[i],ct[i],tat,wt);
   }
-  avg_wt = wt * 1.0 / NOP;
-  avg_tat = tat * 1.0 / NOP;
+  avg_tat/=NOP;
+  avg_wt/=NOP;
   printf("\nAverage Turn Around Time:\t%f", avg_wt);
   printf("\nAverage Waiting Time:\t%f", avg_tat);
 }
