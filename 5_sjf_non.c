@@ -66,16 +66,12 @@ int main()
     	}
     }
 
+    float avgTat=0,avgWat=0;
     for(int i=0;i<n;i++)
     {
     	tat[i]=ct[i]-at[i];
     	wt[i]=tat[i]-bt[i];
-    }
-
-    float avgTat=0,avgWat=0;
-    for(int i=0;i<n;i++)
-    {
-    	avgTat+=tat[i];
+		avgTat+=tat[i];
     	avgWat+=wt[i];
     }
     avgTat/=n;
@@ -87,7 +83,6 @@ int main()
     }
     printf("Avg TAT : %f\n",avgTat);
     printf("Avg WT : %f\n",avgWat);
-
     return 0;
 
 }
