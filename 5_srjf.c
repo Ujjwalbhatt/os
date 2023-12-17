@@ -37,7 +37,7 @@ int main()
         if (shortestJobIndex == -1) {
             currentTime++;
             continue;
-        }
+        }       
         remainingTime[shortestJobIndex]--;
         if (remainingTime[shortestJobIndex] == 0) {
             nProComp++;

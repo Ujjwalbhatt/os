@@ -46,9 +46,6 @@ int main()
 			swap(&bt[i],&bt[pos]);
            
 		}
-        for(int i=0;i<n;i++)
-         printf("pid[i]=%d at[i]=%d bt[i]=%d\n",pid[i],at[i],bt[i]);
-         printf("--------\n");
 	}
 	
 	ct[0]=at[0]+bt[0];
