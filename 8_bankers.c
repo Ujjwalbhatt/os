@@ -2,39 +2,39 @@
 #include <stdio.h>
 int main()
 {
-	int n, m, i, j, k;
+	int n, m;
 	printf("Enter number of process and resources : ");
 	scanf("%d%d", &n, &m);
 	printf("Enter allocation matrix : ");
 	int alloc[n][m];
-	for (i = 0; i < n; i++)
-		for (j = 0; j < m; j++)
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
 			scanf("%d", &alloc[i][j]);
 	printf("Enter max matrix : ");
 	int max[n][m];
-	for (i = 0; i < n; i++)
-		for (j = 0; j < m; j++)
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
 			scanf("%d", &max[i][j]);
 	printf("Enter available matrix : ");
 	int avail[m];
-	for (i = 0; i < m; i++)
+	for (int i = 0; i < m; i++)
 		scanf("%d", &avail[i]);
 
 	int f[n], ans[n], ind = 0;
-	for (k = 0; k < n; k++) {
+	for (int k = 0; k < n; k++) {
 		f[k] = 0;
 	}
 	int need[n][m];
-	for (i = 0; i < n; i++) {
-		for (j = 0; j < m; j++)
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++)
 			need[i][j] = max[i][j] - alloc[i][j];
 	}
-	for (k = 0; k < n; k++) {
-		for (i = 0; i < n; i++) {
+	for (int k = 0; k < n; k++) {
+		for (int i = 0; i < n; i++) {
 			if (f[i] == 0) {
 
 				int flag = 0;
-				for (j = 0; j < m; j++) {
+				for (int j = 0; j < m; j++) {
 					if (need[i][j] > avail[j]){
 						flag = 1;
 						break;
@@ -63,7 +63,7 @@ int main()
 	if(flag==1)
 	{
 	printf("Following is the SAFE Sequence\n");
-	for (i = 0; i < n - 1; i++)
+	for (int i = 0; i < n - 1; i++)
 		printf(" P%d ->", ans[i]);
 	printf(" P%d", ans[n - 1]);
 	}
