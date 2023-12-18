@@ -1,11 +1,26 @@
+#!/bin/bash
 echo "Enter a number"
 read num
-
-fact=1
-
-for((i=2;i<=num;i++))
+# if((num<0))
+# then 
+# echo "let 0"
+# elif((num>0))
+# then 
+# echo "get 0"
+# else
+# echo "eq 0"
+# fi
+# fact=1
+declare -a arr
+for((i=0;i<num;i++))
 {
-  fact=$((fact * i))  #fact = fact * i
+  # echo -n $i
+  read j
+  arr[i]=$j
 }
 
-echo $fact
+echo ${arr[@]}
+
+
+# chmod +x 11_shellfact.sh 
+# ./11_shellfact.sh 
